@@ -19,7 +19,6 @@ def sort_for_list(parsed_document)
 
 @doc.each do |s|
 	if (s.values[1].include?("[2021]") || s.values[1].include?("[2020]"))
-		puts s.values
 		@split_them_up = s.values[1].gsub(/[\u2013]/,'-').encode('ASCII', invalid: :replace, undef: :replace, replace: "").split(' - ')
 		puts @split_them_up
 		@split_them_up[1].gsub!('[2021]', '')
@@ -51,3 +50,8 @@ end
 parse_the_page(@url)
 sort_for_list(@doc)
 next_phase()
+
+#https://www.albumoftheyear.org/releases/this-week/
+#https://www.officialcharts.com/new-releases/
+#https://www.allmusic.com/newreleases
+#https://www.metacritic.com/browse/albums/release-date/new-releases/date
