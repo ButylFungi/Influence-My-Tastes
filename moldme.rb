@@ -18,7 +18,6 @@ if url == @funkysouls_url
 	
 elsif url == @album_of_the_year_url
 
-	#@doc = parsed.xpath('//*[@id="centerContent"]/div[1]/div[1]')
 	@doc = parsed.css('div>div>div>a>div') #Returns an array where the first one is the Artist Title and the second is the AlbumTitle.
 	
 end
