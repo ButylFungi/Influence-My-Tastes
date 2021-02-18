@@ -53,13 +53,9 @@ parsed_document.each do |s|
 		@albumArray << @split_them_up[1]
 		
 		mashem = @artistArray.zip(@albumArray)
-#		mashem.reject{|s| s.empty? }
-
-		
 		@mashem = @mashem + mashem
-		
-				
-		#carve_in_rock(s.values[0], @split_them_up[0], @split_them_up[1])
+			
+
 		puts s.values[0], @split_them_up[0], @split_them_up[1].green
 	else
 		puts "Nothing Here Folks".red
@@ -96,14 +92,7 @@ def sort_for_list_album_of_the_year(parsed_document)
 	end
 	
 	mashem = @artistArray.zip(@albumArray)
-	
-#	mashem.reject{|s| s.empty? }
-
-	
 	@mashem = @mashem + mashem
-#	mashem.each do |t|
-#		carve_in_rock("AlbumOfTheYear", t[0], t[1])
-#	end
 	
 end
 
